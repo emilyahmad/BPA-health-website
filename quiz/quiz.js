@@ -77,4 +77,21 @@ function showQuestion() {
     } else {
         nextBtn.textContent = "Next";
     }
+
+    // disable next until user selects an answer
+    nextBtn.disabled == true;
+}
+
+// when user clicks an answer
+function selectAnswer (buttonClicked, selectedChoice) {
+    // remove highlight from all buttons first
+    Array.from(choicesDiv.children).forEach(btn => {
+        btn.classList.remove("selected");
+    });
+    // highlight button user clicked
+    buttonClicked.classList.add("selected"); // clicked button is highlighted
+
+    // store answer for this question
+    answers[current] = selectedChoice;
+
 }
