@@ -53,4 +53,28 @@ document.getElementById("startBtn").addEventListener("click", startQuiz());
 function showQuestion() {
     // get question currently on
     const currentQuestion = QUESTIONS[current];
+    // display question text
+    questionText.textContent = currentQuestion.question;
+    // clear old choices before adding new ones
+    choicesDiv.innerHTML = "" // can replace formatting too, like bold (> text content)
+
+    // create btn for each choice
+    currentQuestion.choices.forEach((choiceText, choiceNumber) => {
+        // for every element of choice that we get --> make a new btn
+        const choiceButton = document.createElement("button");
+        choiceButton.Text = choiceText;
+
+        // when clicked, rescore
+        choiceButton.onclick = () => selectAnswer(choiceButton, choiceNumber);
+
+        // add button to the page
+        choicesDiv.appendChild(choiceButton);
+    });
+    
+    // change next button depending on the question #
+    if (current === QUESTIONS.length-1) {
+        nextBtn.textContent = "Finish";
+    } else {
+        nextBtn.textContent = "Next";
+    }
 }
