@@ -121,5 +121,16 @@ function showResults() {
     // clear old answers, if any
     answerList.innerHTML = "";
     // show results on results page
-    scoreText.textContent =
+    // changes numeric to a string
+    scoreText.textContent = `You score ${score} out of ${QUESTIONS.length * 3}. `
+    + `Please see the rubric above for interpretation.`
+
+    // show the results page
+    answerPage.style.display = "block";
 }
+
+// restart button resets results view
+document.getElementById("restartBtn").addEventListener("click", () => {
+    answerPage.style.display = "none";
+    answer = []; // clear stored answers
+});
