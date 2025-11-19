@@ -33,6 +33,24 @@ let score = 0;
 const popupBg = document.getElementById("popupBg");// don't need to capitalize all consts in js
 const questionText = document.getElementById("questionText");
 const choicesDiv = document.getElementById("choices");
+const startBtn = document.getElementById("startBtn");
 const nextBtn = document.getElementById("nextBtn");
 const answerPage = document.getElementById("answerPage");
 const answerList = document.getElementById("answerList");
+const scoreText = document.getElementById("scoreText");
+
+function startQuiz() {
+    popupBg.style.display = "flex";
+    current = 0;
+    answers = [];
+    score = 0;
+    showQuestion();
+}
+
+document.getElementById("startBtn").addEventListener("click", startQuiz());
+
+// show current question & choices
+function showQuestion() {
+    // get question currently on
+    const currentQuestion = QUESTIONS[current];
+}
