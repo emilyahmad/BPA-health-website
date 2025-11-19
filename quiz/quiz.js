@@ -23,3 +23,16 @@ const QUESTIONS = [
   { question: "Have your mood changes affected your work, school, or social life?",
     choices: ["Not at all", "A little", "Moderately", "Severely"], answer: 3 }
 ];
+
+// use let (open-ended) & var to declare variables (scope)
+let current = 0;
+let answers = [];
+let score = 0;
+
+// target ids
+const popupBg = document.getElementById("popupBg");// don't need to capitalize all consts in js
+const questionText = document.getElementById("questionText");
+const choicesDiv = document.getElementById("choices");
+const nextBtn = document.getElementById("nextBtn");
+const answerPage = document.getElementById("answerPage");
+const answerList = document.getElementById("answerList");
