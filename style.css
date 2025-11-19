@@ -1,0 +1,246 @@
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Layout wrapper: keeps nav fixed visually while content scrolls */
+.page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* full viewport height */
+}
+
+/* ===== NAVIGATION BAR ===== */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    background: linear-gradient(180deg, #04162f, #0a2d5d);
+    justify-content: space-between;
+    border-bottom: 0.5px solid white;
+    height: 80px;
+    flex-shrink: 0;          /* don't let the nav shrink */
+    position: sticky;        /* in case the page itself scrolls */
+    top: 0;
+    z-index: 999;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    margin-right: 1em;
+}
+
+.main-nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: Arial, sans-serif;
+    padding: 0.5rem 1rem;
+    border: 0.5px solid transparent;
+    border-radius: 8px;
+    transition: border 0.3s ease;
+}
+
+.nav-link:link,
+.nav-link:visited {
+    color: white;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    border: 0.5px solid white;
+}
+
+/* ===== SNAP SCROLL CONTAINER ===== */
+.snap-container {
+    flex: 1;                         /* take remaining height under nav */
+    overflow-y: auto;                /* scroll only the content */
+    scroll-snap-type: y mandatory;   /* vertical snap scrolling */
+}
+
+/* Every section snaps */
+.snap-container > section {
+    scroll-snap-align: start;
+    min-height: 100vh;               /* full screen per section */
+    padding: 2rem;
+}
+
+/* ===== HERO SECTION ===== */
+.section-hero {
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.crisis-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.mission-statement {
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+}
+
+.hero-img {
+    height: 50px;
+}
+
+/* ===== INFO SECTION ===== */
+.section-info {
+    background-color: cyan;
+}
+
+.info-text {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.info-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.info-box {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    flex: 1 1 200px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.info-box-text {
+    font-size: 1.3rem;
+}
+
+.learn-more-btn {
+    align-self: flex-start;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    border: none;
+    background-color: #04162f;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    padding: 2rem;
+    background-color: #04162f;
+    color: white;
+    scroll-snap-align: start;
+}
+
+.footer-nav-list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 0.95rem;
+}
+
+.footer-nav-link:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== TESTIMONIALS SECTION ===== */
+.section-testimonials {
+    background-image: linear-gradient(#D9F3FF, #60B6DF);
+}
+
+.testimonials-text {
+    color: 0B0F55;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.testimonials-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.testimonial-box {
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 1.5rem;
+    border-radius: 12px;
+    flex: 1 1 250px;
+    max-width: 300px;
+}
+
+.testimonial-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.person-name {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
