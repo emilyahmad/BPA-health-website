@@ -94,4 +94,32 @@ function selectAnswer (buttonClicked, selectedChoice) {
     // store answer for this question
     answers[current] = selectedChoice;
 
+    // when next, finished button is clicked ; nextBtn appears
+    nextBtn.addEventListener("click", () => {
+        // if there are additional questions
+        if (current < QUESTIONS.length - 1) {
+            current++;
+            showQuestion();
+        } else { // if this was the last question
+            calculateScore();
+            showResults();
+        }
+    });
+}
+// add up the user's score
+function calculateScore() {
+    // each selected answer's 
+    score = answers.reduce ((total, answerValue) => {
+        return total + (answerValue || 0);
+    }, 0);
+}
+
+// show results
+function showResults() {
+    // hide the quiz popup
+    popupBg.style.display = "none";
+    // clear old answers, if any
+    answerList.innerHTML = "";
+    // show results on results page
+    scoreText.textContent =
 }
