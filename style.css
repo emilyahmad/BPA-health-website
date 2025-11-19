@@ -215,8 +215,12 @@ footer {
 
 .testimonials-text {
     color: 0B0F55;
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 2rem;
+
+    display: flex;
+    justify-content: center;
+    margin-top: 1.7rem;
 }
 
 .testimonials-boxes {
@@ -226,11 +230,15 @@ footer {
 }
 
 .testimonial-box {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-image: linear-gradient(#183D68, #071728);
+    color: white;
     padding: 1.5rem;
     border-radius: 12px;
     flex: 1 1 250px;
     max-width: 300px;
+
+    border: white 4px solid;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.159);
 }
 
 .testimonial-img {
