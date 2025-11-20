@@ -9,3 +9,20 @@ html {
  background-color: lightblue;
  padding: 10px 0px 10px 0px;
 }
+
+.accordion {
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+.forum {
+    float: right;
+    background-color: lightgrey;
+    padding: 5px 10px;
+    border-radius: 7px;
+}
